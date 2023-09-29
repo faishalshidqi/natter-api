@@ -21,6 +21,7 @@ public class SpaceController {
             database.updateUnique("insert into spaces(space_id, name, owner) " + "values(" + spaceId + ", '"+ spaceName + "', '"+ owner+ "');");
             response.status(201);
             response.header("Location", "/spaces/" + spaceId);
+
             return new JSONObject()
                     .put("name", spaceName)
                     .put("uri", "/spaces/" + spaceId);
